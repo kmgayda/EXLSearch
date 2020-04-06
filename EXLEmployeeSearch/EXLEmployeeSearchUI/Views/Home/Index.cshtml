@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = "_Layout";
+    var today = DateTime.Today.Year;
+}
+<div width="200px">
+    <form action="/Home/Search" method="post">
+        <table>
+            <tr>
+                <td>Search Text:</td>
+                <td style="text-align:right"><input type="text" name="searchData" /></td>
+            </tr>
+            <tr>
+                <td>Start Year:</td>
+                <td style="text-align:right"><input type="text" name="startYear" /></td>
+            </tr>
+            <tr>
+                <td>End Year:</td>
+                <td style="text-align:right"><input type="text" name="endYear" value="@today" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:right"><input type="submit" value="Search" /></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
